@@ -1,7 +1,7 @@
 const React = require('react');
 const { Component } = require('react');
 
-const { Route, Switch } = require('react-router-dom');
+const { Route, Switch, Redirect } = require('react-router-dom');
 const Home = require('./pages/home');
 const Contact = require('./pages/contact');
 
@@ -12,6 +12,9 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Home}/> 
           <Route exact path='/contact' component={Contact}/>
+          <Route exact path='**'>
+            <Redirect to="/" />
+          </Route>
         </Switch>
       </div>
     )

@@ -12,7 +12,7 @@ class App extends Component {
     		Check for the use of react route : 
     		<Link to="/contact">Contact</Link><br/>
     		This Project also deals with non react(node js) routing : 
-    		<Link to="/about">About</Link>
+    		<a href="/about">About</a>
     	</div>
     );
   }

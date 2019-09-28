@@ -11,7 +11,7 @@ class App extends Component {
 
 
     		To check with non react(node js) routing : 
-    		<Link to="/about">About</Link>
+    		<a href="/about">About</a>
     	</div>
     );
   }
