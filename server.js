@@ -19,10 +19,9 @@ app.get('/about',function(request, response){
 });
 
 //for react
-app.get('*',function(request, response){
-	response.sendFile(path.join(__dirname+'/views/index.html'));
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/views/index.html')); 
 });
-
 
 var listener = app.listen(PORT, function () {
   console.log('Your app is listening on port ' + PORT);  

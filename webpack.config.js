@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  context: path.join(__dirname, './'),
   entry: './app/app.jsx',
   output: {
     path: path.join(__dirname, 'public'),
@@ -18,6 +17,13 @@ module.exports = {
         loader: 'jsx-loader',
         include: path.join(__dirname, 'app'),
       },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      } 
     ],
   },
 };
